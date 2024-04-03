@@ -69,14 +69,17 @@ const CrudPage = () => {
       </Table>
 
       {/*Modal */}
-      <FormModal
-        isOpen={isOpen}
-        handleClose={() => {
-          setİsOpen(false);
-          setEditItem(null);
-        }}
-        editItem={editItem}
-      />
+
+      {isOpen && (
+        <FormModal
+          isOpen={isOpen}
+          handleClose={() => {
+            setİsOpen(false);
+            setEditItem(null);
+          }}
+          editItem={editItem}
+        />
+      )}
     </div>
   );
 };
